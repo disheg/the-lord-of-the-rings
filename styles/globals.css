@@ -14,3 +14,32 @@ a {
 * {
   box-sizing: border-box;
 }
+
+ul li {
+  display: inline-block;
+  margin-right: 50px;
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  padding: 25px 10px;
+  color: white;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  background-color: grey;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.nav {
+  float: center;
+  padding: 15px;
+}
