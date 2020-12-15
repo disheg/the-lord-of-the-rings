@@ -3,12 +3,23 @@ import request from '../api/api';
 
 const Character = ({ character }) => {
   const { docs } = character;
-  console.log('1', character)
   return <MainLayout>
-    Name: {docs[0].name}
-    Race: {docs[0].race}
-    Spouce: {docs[0].spouce}
-    Wiki: <a href={docs[0].wikiUrl}>{docs[0].wikiUrl}</a>
+  <div className="container">
+    <div className="content">
+      <div className="content-header">{docs[0].name}</div>
+        <div className="content-body">
+          <div className="row">
+              <div className="column">
+              <div className="card">
+            <ul><li>Race: {docs[0].race}</li>
+            <li>Spouce: {docs[0].spouce}</li>
+            <li>Wiki: <a href={docs[0].wikiUrl}>{docs[0].wikiUrl}</a></li></ul>
+          </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
   </MainLayout>
 };
 

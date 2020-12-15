@@ -24,7 +24,7 @@ ul li {
 ul li a {
   text-decoration: none;
   padding: 25px 10px;
-  color: white;
+  color: black;
 }
 
 ul li:hover {
@@ -43,3 +43,46 @@ ul li:hover {
   float: center;
   padding: 15px;
 }
+
+.column {
+  width: 100%;
+  padding: 0 0px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+.content-body {
+  padding-top: 20px;
+  cursor: pointer;
+}
+.content-header {
+  font-size: 30px;
+}
+
+.content-text {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+

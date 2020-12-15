@@ -3,12 +3,23 @@ import request from '../api/api';
 
 const Movie = ({ movie }) => {
   const { docs } = movie;
-  console.log('1', movie)
   return <MainLayout>
-    Name: {docs[0].name}
-    Budget: {docs[0].budgetInMillions} 000 000$
-    The Tomatometer score: {docs[0].rottenTomatesScore}
-    Academy Award Nominations: {docs[0].academyAwardNominations}
+  <div className="container">
+    <div className="content">
+      <div className="content-header">{docs[0].name}</div>
+        <div className="content-body">
+          <div className="row">
+              <div className="column">
+              <div className="card">
+            <ul><li>Budget: {docs[0].budgetInMillions} 000 000$</li>
+            <li>The Tomatometer score: {docs[0].rottenTomatesScore}</li>
+            <li>Academy Award Nominations: {docs[0].academyAwardNominations}</li></ul>
+          </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
   </MainLayout>
 }
 

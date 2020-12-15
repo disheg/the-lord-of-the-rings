@@ -1,7 +1,6 @@
-import { MainLayout } from '../components/MainLayout';
+import About from './about';
 export default function Home() {
   return (
-    <MainLayout>
-    </MainLayout>
+    <About />
   )
 }

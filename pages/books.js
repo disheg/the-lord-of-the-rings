@@ -4,12 +4,22 @@ import request from './api/api';
 
 const Books = ({ books }) => {
   const { docs, total } = books;
-  const booksList = docs.map((book) => (<li key={_.uniqueId()}>{book.name}</li>));
+  const booksList = docs.map((book) => (<div className="card">
+  {book.name}
+</div>));
   return (<MainLayout>
-    <div>
-      <h1>Total: {total}</h1>
-      {booksList}
+    <div className="container">
+    <div className="content">
+      <div className="content-header">Books: {total}</div>
+        <div className="content-body">
+          <div className="row">
+              <div className="column">
+                {booksList}
+              </div>
+          </div>
+      </div>
     </div>
+  </div>
   </MainLayout>)
 };
 
