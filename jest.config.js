@@ -2,7 +2,7 @@ module.exports = {
   collectCoverageFrom: [
     '**/*.{js,jsx}',
     '!**/node_modules/**',
-    '!**/pages/tests/**',
+    '!**/__tests__/**',
     '!**/coverage/**',
     '!jest.config.js',
   ],
@@ -19,10 +19,10 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
   },
   setupFiles: [
-    '<rootDir>/pages/tests/setup.js',
+    '<rootDir>/__tests__/setup.js',
   ],
   setupFilesAfterEnv: [
-    '<rootDir>/pages/tests/setupAfterEnv.js',
+    '<rootDir>/__tests__/setupAfterEnv.js',
   ],
   testMatch: [
     '**/?(*.)+(spec|test).[jt]s?(x)',
@@ -33,6 +33,6 @@ module.exports = {
     '/coverage/'
   ],
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+    "\\.js$": ["babel-jest", { "configFile": "./babel.config.test.json"}],
   },
 };

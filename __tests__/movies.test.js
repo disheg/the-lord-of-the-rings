@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import Movies from '../movies';
+import Movies from '../pages/movies';
 
 let initialProps;
 
